@@ -1,0 +1,12 @@
+OS_TARGETS += GENERIC_CFG80211
+
+TARGET ?= $(DEFAULT_TARGET)
+
+ifneq ($(filter $(OS_TARGETS),$(TARGET)),)
+PLATFORM := cfg80211
+VENDOR := plume-openwrt
+SERVICE_PROVIDERS ?= opensync-dev
+IMAGE_DEPLOYMENT_PROFILE ?= opensync-dev
+KCONFIG_TARGET ?= $(VENDOR_DIR)/kconfig/targets/$(TARGET)
+ARCH_MK = $(PLATFORM_DIR)/build/$(PLATFORM).mk
+endif
