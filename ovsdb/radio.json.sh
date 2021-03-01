@@ -71,57 +71,6 @@ cat << EOF
             "hw_mode": "11ac",
             "vif_configs": ["set", [ ["named-uuid", "id2"] ] ]
         }
-    },
-    {
-        "op": "insert",
-        "table": "Wifi_VIF_Config",
-        "row": {
-            "enabled": true,
-            "vif_dbg_lvl": 0,
-            "ap_bridge": true,
-            "bridge": "br-wan",
-            "if_name": "bhaul-sta-24",
-            "mode": "sta",
-            "vif_radio_idx": 6,
-            "mac_list_type": "none",
-            "ssid": $(generate_onboarding_ssid),
-            "security": $(generate_onboarding_psk)
-        },
-        "uuid-name": "id1"
-    },
-    {
-        "op": "insert",
-        "table": "Wifi_VIF_Config",
-        "row": {
-            "enabled": true,
-            "vif_dbg_lvl": 0,
-            "ap_bridge": true,
-            "bridge": "br-wan",
-            "if_name": "bhaul-sta-50l",
-            "mode": "sta",
-            "vif_radio_idx": 6,
-            "mac_list_type": "none",
-            "ssid": $(generate_onboarding_ssid),
-            "security": $(generate_onboarding_psk)
-        },
-        "uuid-name": "id2"
-    },
-    {
-        "op": "insert",
-        "table": "Wifi_VIF_Config",
-        "row": {
-            "enabled": true,
-            "vif_dbg_lvl": 0,
-            "ap_bridge": true,
-            "bridge": "br-wan",
-            "if_name": "bhaul-sta-50u",
-            "mode": "sta",
-            "vif_radio_idx": 6,
-            "mac_list_type": "none",
-            "ssid": $(generate_onboarding_ssid),
-            "security": $(generate_onboarding_psk)
-        },
-        "uuid-name": "id0"
     }
 ]
 EOF
