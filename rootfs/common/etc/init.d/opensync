@@ -38,6 +38,9 @@ stop_service()
     rm /tmp/dhcp.leases
     echo "Removing old wpa_ctrl sockets"
     rm -f /tmp/wpa_ctrl_*
+    echo "Removing old hostapd and supplicant files"
+    rm -r /tmp/run/wpa_supplicant-*
+    rm -r /tmp/run/hostapd-*
     echo "Removing DNS files"
     rm -rf /tmp/dns
 }
